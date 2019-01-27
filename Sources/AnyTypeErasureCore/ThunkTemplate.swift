@@ -88,7 +88,8 @@ struct ThunkTemplateFactory {
         let comps: [String] = Array(path.components(separatedBy: "/").dropLast())
         let directoryPath: String = comps.joined(separator: "/")
         let location: URL = URL(fileURLWithPath: "\(directoryPath)/\(name).swift")
-        print("\n\(contents)\n")
+        print("\n\(contents)")
+        print("👌 Any\(definition.name).swift created")
         let result: Template = Template(location: location, contents: contents)
         return result
     }
